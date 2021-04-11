@@ -2,6 +2,14 @@
 
 An example project implementing [Svelte Material UI](https://github.com/hperrin/svelte-material-ui) with [Webpack](https://webpack.js.org/).
 
+# Get it Running
+
+1. Clone the repo.
+2. `npm install`
+3. `npm run build`
+4. `npm run serve`
+5. http://localhost:5000
+
 # License
 
 Copyright 2019 Hunter Perrin

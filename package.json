@@ -12,18 +12,16 @@
   "author": "Hunter Perrin <hperrin@gmail.com>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@material/typography": "^3.1.0",
-    "@smui/button": "^1.0.0-beta.20",
-    "css-loader": "^3.4.2",
-    "mini-css-extract-plugin": "^0.8.2",
-    "node-sass": "^4.13.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "sass-loader": "^8.0.2",
-    "serve": "^11.3.0",
-    "style-loader": "^1.1.3",
-    "svelte": "^3.18.1",
-    "svelte-loader": "^2.13.6",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "@material/typography": "^10.0.0",
+    "@smui/button": "^3.0.0-beta.0",
+    "css-loader": "^5.2.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "serve": "^11.3.2",
+    "style-loader": "^2.0.0",
+    "svelte": "^3.37.0",
+    "svelte-loader": "^3.1.0",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
   }
 }

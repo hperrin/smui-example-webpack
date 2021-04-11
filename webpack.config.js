@@ -1,55 +1,37 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const path = require("path");
 
 module.exports = {
-  mode: 'development',
+  mode: "production",
   entry: {
-    bundle: path.resolve(__dirname, 'index.js')
+    bundle: path.resolve(__dirname, "index.js"),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].js",
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[name].[id].css'
-    }),
-    new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /\.css$/g,
-      cssProcessor: require('cssnano'),
-      cssProcessorPluginOptions: {
-        preset: ['default', { discardComments: { removeAll: true } }]
-      },
-      canPrint: true
-    })
-  ],
   module: {
     rules: [
       {
         test: /\.(html|svelte)$/,
-        use: 'svelte-loader'
+        use: "svelte-loader",
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          'style-loader',
-          MiniCssExtractPlugin.loader,
-          'css-loader',
+          "style-loader",
+          "css-loader",
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
+              // Prefer `dart-sass`
+              implementation: require("sass"),
               sassOptions: {
-                includePaths: [
-                  './theme',
-                  './node_modules'
-                ]
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
+                includePaths: ["./theme", "./node_modules"],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
