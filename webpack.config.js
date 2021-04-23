@@ -16,7 +16,7 @@ module.exports = {
         use: "svelte-loader",
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.s?css$/,
         use: [
           "style-loader",
           "css-loader",
