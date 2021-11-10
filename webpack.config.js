@@ -1,4 +1,5 @@
 const path = require("path");
+const preprocess = require("svelte-preprocess");
 
 module.exports = {
   mode: "production",
@@ -13,7 +14,12 @@ module.exports = {
     rules: [
       {
         test: /\.(html|svelte)$/,
-        use: "svelte-loader",
+        use: {
+          loader: "svelte-loader",
+          options: {
+            preprocess: preprocess(),
+          },
+        },
       },
       {
         test: /\.s?css$/,
