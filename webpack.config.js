@@ -23,20 +23,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              // Prefer `dart-sass`
-              implementation: require("sass"),
-              sassOptions: {
-                includePaths: ["./theme", "./node_modules"],
-              },
-            },
-          },
-        ],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
